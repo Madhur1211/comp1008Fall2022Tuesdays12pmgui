@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="71.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" text="New">
+               <HBox.margin>
+                  <Insets left="40.0" right="40.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Delete">
+               <HBox.margin>
+                  <Insets right="40.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Save">
+               <HBox.margin>
+                  <Insets right="40.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Exit">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TabPane layoutX="30.0" layoutY="71.0" prefHeight="227.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Example Controls">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane alignment="CENTER" layoutX="38.0" layoutY="17.0" prefHeight="164.0" prefWidth="180.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.99999237060547" minWidth="10.0" prefWidth="43.666653951009124" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="RadioButton" />
+                              <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.rowIndex="1" />
+                              <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="2" />
+                              <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <ScrollPane hbarPolicy="ALWAYS" layoutX="282.0" layoutY="-1.0" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <TextArea prefHeight="200.0" prefWidth="200.0" text="hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;hello everyone. hello everyone. &#10;" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tab2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Tab3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox layoutX="54.0" layoutY="325.0" prefHeight="61.0" prefWidth="527.0">
+         <children>
+            <ProgressBar prefHeight="18.0" prefWidth="371.0" progress="0.75">
+               <HBox.margin>
+                  <Insets right="50.0" top="25.0" />
+               </HBox.margin>
+            </ProgressBar>
+            <Button mnemonicParsing="false" text="Save">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
