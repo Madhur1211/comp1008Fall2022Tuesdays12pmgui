@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class Utilities {
 
     static void openPage(String fileName, String title) throws Exception{
-
+//test
         FXMLLoader fxmlLoader =
                 new FXMLLoader(HelloApplication.class.getResource(fileName +"-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
