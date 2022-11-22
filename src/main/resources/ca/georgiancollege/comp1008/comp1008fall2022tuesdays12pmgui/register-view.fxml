@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1008.comp1008fall2022tuesdays12pmgui.LoginController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1008.comp1008fall2022tuesdays12pmgui.RegisterController">
    <children>
-      <Label alignment="CENTER" prefHeight="40.0" prefWidth="250.0" text="Example Code" textFill="DARKBLUE">
+      <Label alignment="CENTER" prefHeight="40.0" prefWidth="250.0" text="Register" textFill="DARKBLUE">
          <font>
             <Font size="25.0" />
          </font>
@@ -18,20 +18,12 @@
             <Insets left="175.0" right="175.0" top="20.0" />
          </VBox.margin>
       </Label>
-      <Label alignment="CENTER" prefHeight="40.0" prefWidth="250.0" text="Login" textFill="DARKBLUE">
+      <Label alignment="CENTER" prefHeight="40.0" prefWidth="250.0" text="Input Information" textFill="DARKBLUE">
          <font>
             <Font size="25.0" />
          </font>
          <VBox.margin>
             <Insets left="175.0" right="175.0" top="20.0" />
-         </VBox.margin>
-      </Label>
-      <Label fx:id="errorMessage" alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Error Message Goes Here" textFill="RED">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets left="50.0" right="50.0" />
          </VBox.margin>
       </Label>
       <TextField fx:id="textUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter Username">
@@ -44,7 +36,12 @@
             <Insets left="150.0" right="150.0" top="20.0" />
          </VBox.margin>
       </PasswordField>
-      <Button mnemonicParsing="false" onAction="#onLoginClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: darkblue;" text="Login" textFill="WHITE">
+      <PasswordField fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Confirm Password">
+         <VBox.margin>
+            <Insets left="150.0" right="150.0" top="20.0" />
+         </VBox.margin>
+      </PasswordField>
+      <Button mnemonicParsing="false" onAction="#onRegisterClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: darkblue;" text="Register" textFill="WHITE">
          <VBox.margin>
             <Insets left="200.0" right="200.0" top="20.0" />
          </VBox.margin>
@@ -52,7 +49,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" onAction="#ofRegisterClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: darkblue;" text="Register" textFill="WHITE">
+      <Button mnemonicParsing="false" onAction="#onClearClick" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: darkblue;" text="Clear" textFill="WHITE">
          <VBox.margin>
             <Insets left="200.0" right="200.0" top="20.0" />
          </VBox.margin>

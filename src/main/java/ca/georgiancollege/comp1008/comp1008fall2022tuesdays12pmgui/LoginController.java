@@ -3,11 +3,14 @@ package ca.georgiancollege.comp1008.comp1008fall2022tuesdays12pmgui;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class LoginController {
 
+    @FXML
+    private Label errorMessage;
     @FXML
     private TextField textUsername;
 
@@ -17,6 +20,15 @@ public class LoginController {
     @FXML
     void ofRegisterClick(ActionEvent event) {
         System.out.println("You clicked on Register button");
+
+        try{
+            Utilities.openPage("register", "Register!");
+        }
+        catch (Exception e){
+            Utilities.showAlert(Alert.AlertType.ERROR,
+                    "Page Load",
+                    "Could not open register page").show();
+        }
     }
 
     @FXML
@@ -34,6 +46,8 @@ public class LoginController {
         receivedPassword.equals(expectedPassword)
         ){
 
+            errorMessage.setText("");
+
             Utilities.showAlert(Alert.AlertType.INFORMATION, "Good job!", "You may enter").show();
 
             try{
@@ -46,10 +60,14 @@ public class LoginController {
         }
         else{
             System.out.println("bad!");
+            /*
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("No good!");
             alert.setContentText("Invalid username and/or password");
             alert.show();
+
+             */
+            errorMessage.setText("Invalid username and/or password");
         }
 
 
@@ -58,6 +76,8 @@ public class LoginController {
     @FXML
     void initialize(){
         System.out.println("Loaded!");
+
+        errorMessage.setText("");
     }
 
 }
