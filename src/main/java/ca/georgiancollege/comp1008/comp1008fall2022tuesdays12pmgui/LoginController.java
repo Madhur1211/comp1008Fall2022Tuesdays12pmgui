@@ -35,46 +35,13 @@ public class LoginController {
 
     @FXML
     void onLoginClick(ActionEvent event) {
-
-        System.out.println("You click on Login button");
-
-        String receivedUsername = textUsername.getText();
-        String receivedPassword = textPassword.getText();
-
-        model.processRequest(receivedUsername, receivedPassword);
-
-        //String expectedUsername = "admin", expectedPassword = "pass";
-
-//        if(receivedUsername.equals(expectedUsername)
-//        &&
-//        receivedPassword.equals(expectedPassword)
-//        ){
-            if(model.validateData()){
-            errorMessage.setText("");
-
-            Utilities.showAlert(Alert.AlertType.INFORMATION, "Good job!", "You may enter").show();
-
-            try{
-                Utilities.openPage("welcome", "Welcome Everyone!");
-            }
-            catch (Exception e){
-                Utilities.showAlert(Alert.AlertType.ERROR, "Not Found", "Could not load the page").show();
-            }
-
+        try{
+            model.processRequest(textUsername.getText(), textPassword.getText());
+            Utilities.openPage("welcome", "Welcome!");
         }
-        else{
-            System.out.println("bad!");
-            /*
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("No good!");
-            alert.setContentText("Invalid username and/or password");
-            alert.show();
-
-             */
-            errorMessage.setText("Invalid username and/or password");
+        catch (Exception e){
+            errorMessage.setText(e.getMessage());
         }
-
-
     }
 
     @FXML
