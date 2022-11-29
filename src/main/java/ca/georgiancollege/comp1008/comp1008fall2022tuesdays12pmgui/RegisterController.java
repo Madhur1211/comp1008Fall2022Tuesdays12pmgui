@@ -16,14 +16,28 @@ public class RegisterController {
     @FXML
     private PasswordField confirmPassword;
 
+    RegisterModel model = new RegisterModel();
+
     @FXML
     void onClearClick(ActionEvent event) {
+
+        textUsername.setText("");
+        textPassword.setText("");
+        confirmPassword.clear();
 
     }
 
     @FXML
     void onRegisterClick(ActionEvent event) {
 
+        //RegisterModel model = new RegisterModel(textUsername.getText(), textPassword.getText(), confirmPassword.getText());
+        model.processRequest(textUsername.getText(), textPassword.getText(), confirmPassword.getText());
+        try {
+            model.validateData();
+        }
+        catch (Exception e){
+            System.err.println(e);
+        }
     }
 
 }

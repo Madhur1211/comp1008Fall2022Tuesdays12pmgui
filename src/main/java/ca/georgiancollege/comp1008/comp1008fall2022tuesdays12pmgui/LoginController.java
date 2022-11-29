@@ -17,6 +17,8 @@ public class LoginController {
     @FXML
     private PasswordField textPassword;
 
+    LoginModel model = new LoginModel();
+
     @FXML
     void ofRegisterClick(ActionEvent event) {
         System.out.println("You clicked on Register button");
@@ -39,13 +41,15 @@ public class LoginController {
         String receivedUsername = textUsername.getText();
         String receivedPassword = textPassword.getText();
 
-        String expectedUsername = "admin", expectedPassword = "pass";
+        model.processRequest(receivedUsername, receivedPassword);
 
-        if(receivedUsername.equals(expectedUsername)
-        &&
-        receivedPassword.equals(expectedPassword)
-        ){
+        //String expectedUsername = "admin", expectedPassword = "pass";
 
+//        if(receivedUsername.equals(expectedUsername)
+//        &&
+//        receivedPassword.equals(expectedPassword)
+//        ){
+            if(model.validateData()){
             errorMessage.setText("");
 
             Utilities.showAlert(Alert.AlertType.INFORMATION, "Good job!", "You may enter").show();
